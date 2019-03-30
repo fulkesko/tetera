@@ -108,12 +108,16 @@ namespace teteradefinitiva
         //color
         private void ChkLuzAmbiente_Checked(object sender, RoutedEventArgs e)
         {
+            float[] global_ambient = new float[] { 18f, 2f, 2f, -20f };
+            gl.LightModel(OpenGL.GL_LIGHT_MODEL_AMBIENT, global_ambient);
+           
 
         }
         //colors
         private void ChkLuzAmbiente_Unchecked(object sender, RoutedEventArgs e)
         {
-
+            float[] global_ambient = new float[] { 0.5f, 0.5f, 0.5f, 1.0f };
+            gl.LightModel(OpenGL.GL_LIGHT_MODEL_AMBIENT, global_ambient);
         }
 
         //luz especular on
