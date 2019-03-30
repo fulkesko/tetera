@@ -1,0 +1,24 @@
+﻿<Window x:Class="teteradefinitiva.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:teteradefinitiva"
+        mc:Ignorable="d"
+        xmlns:sgl="clr-namespace:SharpGL.WPF;assembly=SharpGL.WPF"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="47*"/>
+        </Grid.ColumnDefinitions>
+        <sgl:OpenGLControl OpenGLDraw="OpenGLControl_OpenGLDraw"
+            OpenGLInitialized="OpenGLControl_OpenGLInitialized" Margin="41,0,0,0" Grid.Column="1" />
+        <CheckBox x:Name="chkLuzAmbiente" Content="Modelo Luz Ambiental" HorizontalAlignment="Left" Margin="26,51,0,0" VerticalAlignment="Top" Width="177" Checked="ChkLuzAmbiente_Checked" Unchecked="ChkLuzAmbiente_Unchecked"/>
+        <CheckBox x:Name="chkLuzAmbientalGlobal" Content="Modelo Luz Ambiental Global" HorizontalAlignment="Left" Margin="26,71,0,0" VerticalAlignment="Top" Checked="ChkLuzAmbientalGlobal_Checked" Unchecked="ChkLuzAmbientalGlobal_Unchecked"/>
+        <CheckBox x:Name="chkPosLuz" Content="Posicion de luz" HorizontalAlignment="Left" Margin="26,91,0,0" VerticalAlignment="Top" Checked="ChkPosLuz_Checked" Unchecked="ChkPosLuz_Unchecked"/>
+        <CheckBox x:Name="chkLuzAmbiental" Content="Luz Ambiental" HorizontalAlignment="Left" Margin="26,131,0,0" VerticalAlignment="Top" Checked="ChkLuzAmbiental_Checked" Unchecked="ChkLuzAmbiental_Unchecked"/>
+        <CheckBox x:Name="chkLuzDifusa" Content="Luz Difusa" HorizontalAlignment="Left" Margin="26,151,0,0" VerticalAlignment="Top" Unchecked="ChkLuzDifusa_Unchecked" Checked="ChkLuzDifusa_Checked"/>
+        <CheckBox x:Name="chkLuzEspecular" Content="Luz Especular" HorizontalAlignment="Left" Margin="26,171,0,0" VerticalAlignment="Top" Checked="ChkLuzEspecular_Checked" Unchecked="ChkLuzEspecular_Unchecked"/>
+    </Grid>
+</Window>
